@@ -1,0 +1,12 @@
+10,10
+4,4,96
+T,T,T,T,T,T,T,T,T,T
+ , , , ,T,T, , , ,T
+T, ,T, , , , ,T, ,T
+T, ,T,T,T,T, ,T, ,T
+T, ,T, ,B, , ,T,T,T
+T, ,T, ,T, , , , ,T
+T, ,T, ,T,T,T,T,T,T
+T, ,T, , , , , , ,T
+T, ,T,T,T,T, ,T, ,T
+T, , ,T, ,T, ,T,T,T

@@ -1,0 +1,12 @@
+10,10
+1,0,100
+T,T,T,T,T,T,T,T,T,T
+B,X, , ,T,T, , , ,T
+T, ,T,X, , , ,T, ,T
+T, ,T,T,T,T, ,T, ,T
+T, ,T, ,X, , ,T,T,T
+T, ,T, ,T,X, , , ,T
+T, ,T, ,T,T,T,T,T,T
+T, ,T, , , , , , ,T
+T, ,T,T,T,T, ,T, ,T
+T, , ,T, ,T, ,T,T,T
