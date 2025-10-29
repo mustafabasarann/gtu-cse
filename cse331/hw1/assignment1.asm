@@ -49,21 +49,16 @@ loop_start:
 	j is_digit
 	
 check_letter:
-	beq $t0, 'a', is_vowel
-	beq $t0, 'e', is_vowel
-	beq $t0, 'i', is_vowel
-	beq $t0, 'o', is_vowel
-	beq $t0, 'u', is_vowel
-	beq $t0, 'A', is_vowel
-	beq $t0, 'E', is_vowel
-	beq $t0, 'I', is_vowel
-	beq $t0, 'O', is_vowel
-	beq $t0, 'U', is_vowel
+	move $a0, $t0
+	jal checkVowel
+	
+	beq $v0, 1, is_vowel
 
 	li $t1, 'a'
 	blt $t0, $t1, check_uppercase_consonant
 	li $t1, 'z'
 	bgt $t0, $t1, check_uppercase_consonant
+	
 	j is_consonant 
 
 check_uppercase_consonant:
@@ -71,6 +66,7 @@ check_uppercase_consonant:
 	blt $t0, $t1, continue_loop
 	li $t1, 'Z'
 	bgt $t0, $t1, continue_loop
+	
 	j is_consonant
 	
 is_space:
@@ -134,3 +130,21 @@ loop_end:
 	li $v0, 10
 	syscall 
 	
+checkVowel:
+	beq $a0, 'a', return_vowel_true
+	beq $a0, 'e', return_vowel_true
+    beq $a0, 'i', return_vowel_true
+    beq $a0, 'o', return_vowel_true
+    beq $a0, 'u', return_vowel_true
+    beq $a0, 'A', return_vowel_true
+    beq $a0, 'E', return_vowel_true
+    beq $a0, 'I', return_vowel_true
+    beq $a0, 'O', return_vowel_true
+    beq $a0, 'U', return_vowel_true
+    
+    li $v0, 0
+    jr $ra
+  
+return_vowel_true:
+	li $v0, 1
+	jr $ra
